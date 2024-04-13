@@ -47,6 +47,7 @@
             </div>
 
             <video controls width = "400px">
+            <video controls width = "80%">
               <source  src="https://hooperai.s3.us-east-2.amazonaws.com/1713023167688video.mp4" type="video/mp4">
              </video>
              <div class = "scoreboard">
@@ -77,6 +78,7 @@
                   document.getElementById("cancel-pay-button").style.display ="none";
                   // Render the Venmo button into #paypal-button-container
                   paypal.Buttons().render('#paypal-button-container')
+                  paypal.Buttons().render('#paypal-button-container');
               </script>
           </div>
              <div class = "share-button">
@@ -86,24 +88,6 @@
               <img src="src/scoreboard.svg" width="60%" height="60%">
               
             </div>
-            <div id = "scoreTable">
-              <table class = "table">
-                <tr class = "tr">
-                  <th>TimeStamp</th>
-                  <th>Scorer</th>
-                  <th>Total Score</th>
-                </tr>
-                <tr>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-                <tr>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </table>
             </div>
           </div>
 

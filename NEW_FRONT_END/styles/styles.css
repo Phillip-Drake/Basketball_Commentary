@@ -179,7 +179,7 @@ body{
     width: 200px;
     height: 60%;
 }
-.info-button{
+.share-button{
     position: absolute;
     bottom:10px;
     right:10px;
@@ -214,18 +214,6 @@ th{
 
     padding: 1rem;
     border-style: solid;
-}
-.share-button{
-    position: absolute;
-    top:10px;
-    right:10px;
-    width:4rem;
-    height:4rem;
-    border-radius:50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #bd6649;
 }
 .info-button:hover{
     background-color:#F88158;
