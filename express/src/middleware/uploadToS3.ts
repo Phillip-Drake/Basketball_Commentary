@@ -1,5 +1,6 @@
 import multer from "multer";
 import multerS3 from "multer-s3";
+import { Video } from "../models/videoModel";
 import { S3Client } from "@aws-sdk/client-s3";
 require("dotenv").config();
 
@@ -22,11 +23,13 @@ const uploadToAWS = multer({
     s3: s3Config,
     bucket: bucketName,
     metadata: function (req, file, cb) {
-      console.log(file);
       cb(null, { fieldName: file.fieldname });
     },
     key: function (req, file, cb) {
-      cb(null, file.originalname);
+      let title: string = Date.now() + file.originalname;
+      let key = title;
+      Video.create({ title: title, key: key });
+      cb(null, Date.now() + file.originalname);
     },
   }),
 }).array("file", 1);
