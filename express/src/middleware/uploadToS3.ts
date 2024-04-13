@@ -2,11 +2,12 @@ import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 import fs from "fs";
 import path from "path";
 import { promisify } from "util";
+import { Video } from "../models/videoModel";
 require("dotenv").config();
 
 const readdir = promisify(fs.readdir);
 
-const region = process.env.REGION;
+const region = process.env.REGION as string;
 const accessKey = process.env.ACCESS_KEY as string;
 const secretKey = process.env.SECRET_KEY as string;
 const bucketName = process.env.BUCKET_NAME as string;
@@ -18,6 +19,14 @@ const s3Config = new S3Client({
   },
   region: region,
 });
+
+function getAWSS3FileLink(
+  bucketName: string,
+  key: string,
+  region: string
+): string {
+  return `https://${bucketName}.s3.${region}.amazonaws.com/${key}`;
+}
 
 async function uploadFileToAWS(filePath: string) {
   try {
@@ -35,9 +44,19 @@ async function uploadFileToAWS(filePath: string) {
     // Delete the local file
     fs.unlinkSync(filePath);
 
-    console.log(`Uploaded ${filePath} to AWS S3 successfully.`);
+    // Get the URL of the uploaded file
+    const fileURL = getAWSS3FileLink(
+      bucketName,
+      path.basename(filePath),
+      region
+    );
+    Video.create({ title: path.basename(filePath), link: fileURL });
+
+    console.log(`Uploaded ${filePath} to AWS S3 successfully. URL: ${fileURL}`);
+    return;
   } catch (error) {
     console.error(`Error uploading ${filePath} to AWS S3:`, error);
+    return;
   }
 }
 
@@ -58,6 +77,7 @@ async function watchDirectoryForChanges() {
         for (const file of files) {
           const filePath = path.join(dirPath, file);
           await uploadFileToAWS(filePath);
+          break;
         }
       }
     } catch (error) {

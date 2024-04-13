@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import * as uploadController from "../controllers/videoController";
 import { watchDirectoryForChanges } from "../middleware/uploadToS3";
+import { Video } from "../models/videoModel";
 
 const videoRouter = express.Router();
 
@@ -20,6 +21,17 @@ videoRouter.post(
     }
   }
 );
+
+// Get all videos from the database
+videoRouter.get("/video", async (req: Request, res: Response) => {
+  try {
+    console.log("Getting videos");
+    const videos = await Video.find({});
+    res.status(200).json(videos);
+  } catch (error) {
+    res.status(500).json({ message: "Error getting videos", error });
+  }
+});
 
 // videoRouter.post("/", uploadFileToAWS);
 
