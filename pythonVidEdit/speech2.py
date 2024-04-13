@@ -5,7 +5,7 @@ from moviepy.audio.io.AudioFileClip import AudioFileClip
 from moviepy.audio.AudioClip import AudioArrayClip
 import numpy as np
 import json
-client = OpenAI(api_key="INSERT_OPEN_AI_KEY")
+#client = OpenAI(api_key="INSERT_OPEN_AI_KEY")
 
 # response = client.chat.completions.create(
 #   model="gpt-3.5-turbo-0125",
