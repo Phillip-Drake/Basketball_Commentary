@@ -3,8 +3,12 @@ import * as uploadController from "../controllers/videoController";
 
 const videoRouter = express.Router();
 
+videoRouter.get("/", (req: Request, res: Response) => {
+  res.send("Hello World!");
+});
+
 videoRouter.post(
-  "/upload",
+  "/",
   uploadController.uploadFile,
   (req: Request, res: Response, next: NextFunction) => {
     if (!req.file) {
@@ -13,7 +17,7 @@ videoRouter.post(
       return;
     }
     console.log(req.file);
-    res.send("File uploaded successfully");
+    res.send("File uploaded successfully").status(200);
   }
 );
 
