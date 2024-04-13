@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap"
-      rel="stylesheet"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
     <title>Phillip Drake</title>
 </head>
   <body>
@@ -21,19 +18,19 @@
               <div class = "input-title">
                 Input Player 1 Name
               </div>
-              <textarea class = text-input rows="1">
+              <textarea class = text-input rows="1" id="player1Name">
                 
               </textarea>
               <div class = "input-title">
                 Input Player 2 Name
               </div>
-              <textarea class = text-input rows="1">
+              <textarea class = text-input rows="1" id="player2Name">
                 
               </textarea>
               <label for = "file_upload" class = "button">
                   <p>
                     Upload video  
-                  </p>  
+                  </p>
               </label>
               <input id = "file_upload" type="file" onchange = "acceptInput()" accept = ".mp4">
               <div id = "submit-video" class = "button submit-video" onclick="submitVideo()">
@@ -42,33 +39,6 @@
                 </p>
               </div>
             </div>
-=======
-    <div class="flex-body">
-      <div class="content-left">
-        <div class="input-box">
-          <img src="src/logo.png" />
-
-          <div class="input-title">Input Player 1 Name</div>
-          <textarea class="text-input" rows="1"> </textarea>
-          <div class="input-title">Input Player 2 Name</div>
-          <textarea class="text-input" rows="1"> </textarea>
-          <label for="file_upload" class="button">
-            <p>Upload video</p>
-          </label>
-          <input
-            id="file_upload"
-            type="file"
-            onchange="acceptInput()"
-            accept=".mp4"
-          />
-          <div
-            id="submit-video"
-            class="button submit-video"
-            onclick="submitVideo()"
-          >
-            <p>Submit Video</p>
-          </div>
->>>>>>> 7beac6ad0ae6563442b532f0db82a09bcd1044c8
         </div>
         <div class = "content-right">
           <div class = "video-box">
@@ -90,216 +60,131 @@
              <div class = "info-button" onclick="showScores()">
               <svg fill="#fffafa"  height="2.3rem" width="2.3rem" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 512 512" xml:space="preserve">
-=======
-          <video controls width="400px">
-            <source
-              src="https://hooperai.s3.us-east-2.amazonaws.com/1713023167688video.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div class="scoreboard">
-            <div class="scoreboardNumberone">5</div>
-            <div class="scoreboardNumbertwo">6</div>
-          </div>
-          <div class="info-button" onclick="showScores()">
-            <svg
-              fill="#fffafa"
-              height="2.3rem"
-              width="2.3rem"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 512 512"
-              xml:space="preserve"
-            >
-              <g>
->>>>>>> 7beac6ad0ae6563442b532f0db82a09bcd1044c8
                 <g>
-                  <path
-                    d="M501.801,15.557H10.199C4.566,15.557,0,20.123,0,25.756v309.066c0,5.633,4.566,10.199,10.199,10.199h35.435v141.222
+                  <g>
+                    <path d="M501.801,15.557H10.199C4.566,15.557,0,20.123,0,25.756v309.066c0,5.633,4.566,10.199,10.199,10.199h35.435v141.222
                       c0,5.633,4.566,10.199,10.199,10.199s10.199-4.566,10.199-10.199V446.66h379.936v39.584c0,5.633,4.566,10.199,10.199,10.199
                       c5.633,0,10.199-4.566,10.199-10.199V345.022h35.434c5.633,0,10.199-4.566,10.199-10.199V25.756
                       C512,20.123,507.434,15.557,501.801,15.557z M445.968,426.262h-0.001H66.033v-31.458h301.978c5.633,0,10.199-4.566,10.199-10.199
-                      c0-5.633-4.566-10.199-10.199-10.199H66.033v-29.384h379.936V426.262z M491.602,324.623H20.398V35.955h471.203V324.623z"
-                  />
+                      c0-5.633-4.566-10.199-10.199-10.199H66.033v-29.384h379.936V426.262z M491.602,324.623H20.398V35.955h471.203V324.623z"/>
+                  </g>
                 </g>
-              </g>
-              <g>
                 <g>
-                  <path
-                    d="M415.719,374.406h-8.297c-5.633,0-10.199,4.566-10.199,10.199c0,5.633,4.566,10.199,10.199,10.199h8.297
-                      c5.633,0,10.199-4.566,10.199-10.199C425.918,378.972,421.352,374.406,415.719,374.406z"
-                  />
+                  <g>
+                    <path d="M415.719,374.406h-8.297c-5.633,0-10.199,4.566-10.199,10.199c0,5.633,4.566,10.199,10.199,10.199h8.297
+                      c5.633,0,10.199-4.566,10.199-10.199C425.918,378.972,421.352,374.406,415.719,374.406z"/>
+                  </g>
                 </g>
-              </g>
-              <g>
                 <g>
-                  <path
-                    d="M203.398,70H95.4c-5.633,0-10.199,4.566-10.199,10.199v200.18c0,5.633,4.566,10.199,10.199,10.199h107.997
+                  <g>
+                    <path d="M203.398,70H95.4c-5.633,0-10.199,4.566-10.199,10.199v200.18c0,5.633,4.566,10.199,10.199,10.199h107.997
                       c5.633,0,10.199-4.566,10.199-10.199V80.199C213.597,74.566,209.031,70,203.398,70z M193.198,270.18h-87.599v-79.692h87.599
-                      V270.18z M193.198,170.09h-87.599V90.399h87.599V170.09z"
-                  />
+                      V270.18z M193.198,170.09h-87.599V90.399h87.599V170.09z"/>
+                  </g>
                 </g>
-              </g>
-              <g>
                 <g>
-                  <path
-                    d="M416.6,70H308.602c-5.633,0-10.199,4.566-10.199,10.199v200.18c0,5.633,4.566,10.199,10.199,10.199H416.6
+                  <g>
+                    <path d="M416.6,70H308.602c-5.633,0-10.199,4.566-10.199,10.199v200.18c0,5.633,4.566,10.199,10.199,10.199H416.6
                       c5.633,0,10.199-4.566,10.199-10.199V80.199C426.799,74.566,422.233,70,416.6,70z M406.401,270.18h-87.599v-79.692h87.599V270.18z
-                      M406.401,170.09h-87.599V90.399h87.599V170.09z"
-                  />
+                      M406.401,170.09h-87.599V90.399h87.599V170.09z"/>
+                  </g>
                 </g>
-              </g>
-              <g>
                 <g>
-                  <path
-                    d="M256,109.574c-5.633,0-10.199,4.566-10.199,10.199v11.172c0,5.633,4.566,10.199,10.199,10.199
-                      c5.633,0,10.199-4.566,10.199-10.199v-11.172C266.199,114.14,261.633,109.574,256,109.574z"
-                  />
+                  <g>
+                    <path d="M256,109.574c-5.633,0-10.199,4.566-10.199,10.199v11.172c0,5.633,4.566,10.199,10.199,10.199
+                      c5.633,0,10.199-4.566,10.199-10.199v-11.172C266.199,114.14,261.633,109.574,256,109.574z"/>
+                  </g>
                 </g>
-              </g>
-              <g>
                 <g>
-                  <path
-                    d="M256,215.71c-5.633,0-10.199,4.566-10.199,10.199v11.172c0,5.633,4.566,10.199,10.199,10.199
-                      c5.633,0,10.199-4.566,10.199-10.199v-11.172C266.199,220.276,261.633,215.71,256,215.71z"
-                  />
+                  <g>
+                    <path d="M256,215.71c-5.633,0-10.199,4.566-10.199,10.199v11.172c0,5.633,4.566,10.199,10.199,10.199
+                      c5.633,0,10.199-4.566,10.199-10.199v-11.172C266.199,220.276,261.633,215.71,256,215.71z"/>
+                  </g>
                 </g>
-              </g>
-            </svg>
+                </svg>
+            </div>
           </div>
+          
         </div>
-      </div>
+        
     </div>
-    <div id="canvas"></div>
+    <div id="canvas">
+      
+    </div>
   </body>
-</html>
+</html> 
 <script>
   var canvas = {
-    element: document.getElementById("canvas"),
+    element: document.getElementById('canvas'),
     width: 100,
     height: 100,
     initialize: function () {
-      this.element.style.width = this.width + "%";
-      this.element.style.height = this.height + "%";
-      document.body.appendChild(this.element);
-    },
-  };
+        this.element.style.width = this.width + '%';
+        this.element.style.height = this.height + '%';
+        document.body.appendChild(this.element);
+    }
+};
 
-  var Ball = {
+var Ball = {
     create: function (color, dx, dy) {
-      var newBall = Object.create(this);
-      newBall.dx = dx;
-      newBall.dy = dy;
-      newBall.width = 500;
-      newBall.height = 250;
-      newBall.element = document.createElement("div");
-      newBall.element.style.width = newBall.width + "px";
-      newBall.element.style.height = newBall.height + "px";
-      newBall.element.className += " ball";
-      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      var path1 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path2 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path3 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path4 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path5 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path6 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path7 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path8 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var path9 = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      svg.setAttribute("aria-hidden", "true");
-      svg.setAttribute("viewbox", "0 0 26 26");
-      svg.setAttribute("width", "500px");
-      svg.setAttribute("height", "500px");
-      svg.setAttribute("transform", "scale(.5)");
+        var newBall = Object.create(this);
+        newBall.dx = dx;
+        newBall.dy = dy;
+        newBall.width = 500;
+        newBall.height = 250;
+        newBall.element = document.createElement('div');
+        newBall.element.style.width = newBall.width + 'px';
+        newBall.element.style.height = newBall.height + 'px';
+        newBall.element.className += ' ball';
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        var path1 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path2 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path3 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path4 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path5 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path6 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path7 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path8 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        var path9 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        svg.setAttribute("aria-hidden","true");
+        svg.setAttribute('viewbox', '0 0 26 26');
+        svg.setAttribute('width', '500px');
+        svg.setAttribute('height', '500px');
+        svg.setAttribute('transform', 'scale(.5)')
 
-      path1.setAttribute(
-        "d",
-        `M224.139,210l40.776,40.776c36.787-33.665,83.793-54.3,134.218-58.917
-		c-3.965-41.654-21.431-79.428-47.967-108.886L224.139,210z`
-      );
-      path1.setAttribute("fill", "#FFAC52");
+        path1.setAttribute('d', `M224.139,210l40.776,40.776c36.787-33.665,83.793-54.3,134.218-58.917
+		c-3.965-41.654-21.431-79.428-47.967-108.886L224.139,210z`);
+        path1.setAttribute('fill', '#FFAC52');
 
-      path2.setAttribute(
-        "d",
-        `M195.854,210l-40.768-40.768c-36.785,33.663-83.79,54.296-134.215,58.912
-		c3.964,41.652,21.426,79.424,47.958,108.881L195.854,210z`
-      );
-      path2.setAttribute("fill", "#FFAC52");
+        path2.setAttribute('d', `M195.854,210l-40.768-40.768c-36.785,33.663-83.79,54.296-134.215,58.912
+		c3.964,41.652,21.426,79.424,47.958,108.881L195.854,210z`);
+        path2.setAttribute('fill', '#FFAC52');
 
-      path3.setAttribute(
-        "d",
-        `M264.928,279.074c-30.139,33.221-48.696,75.509-53.062,120.904
-		c48.061-0.466,91.908-18.858,125.16-48.806L264.928,279.074z`
-      );
-      path3.setAttribute("fill", "#FFAC52");
+        path3.setAttribute('d', `M264.928,279.074c-30.139,33.221-48.696,75.509-53.062,120.904
+		c48.061-0.466,91.908-18.858,125.16-48.806L264.928,279.074z`)
+        path3.setAttribute('fill', '#FFAC52');
 
-      path4.setAttribute(
-        "d",
-        `M169.228,155.089l40.768,40.768L337.023,68.831c-29.458-26.53-67.229-43.992-108.88-47.957
-		C223.526,71.298,202.893,118.304,169.228,155.089z`
-      );
-      path4.setAttribute("fill", "#FFAC52");
+        path4.setAttribute('d', `M169.228,155.089l40.768,40.768L337.023,68.831c-29.458-26.53-67.229-43.992-108.88-47.957
+		C223.526,71.298,202.893,118.304,169.228,155.089z`);
+        path4.setAttribute('fill', '#FFAC52');
 
-      path5.setAttribute(
-        "d",
-        `M250.772,264.918l-40.776-40.776L82.971,351.168c29.459,26.535,67.233,43.999,108.887,47.962
-		C196.476,348.707,217.108,301.703,250.772,264.918z`
-      );
-      path5.setAttribute("fill", "#FFAC52");
+        path5.setAttribute('d', `M250.772,264.918l-40.776-40.776L82.971,351.168c29.459,26.535,67.233,43.999,108.887,47.962
+		C196.476,348.707,217.108,301.703,250.772,264.918z`);
+        path5.setAttribute('fill', '#FFAC52');
 
-      path6.setAttribute(
-        "d",
-        `M155.073,140.934c30.139-33.223,48.697-75.512,53.063-120.907
-		c-48.062,0.464-91.91,18.857-125.162,48.808L155.073,140.934z`
-      );
-      path6.setAttribute("fill", "#FFAC52");
+        path6.setAttribute('d', `M155.073,140.934c30.139-33.223,48.697-75.512,53.063-120.907
+		c-48.062,0.464-91.91,18.857-125.162,48.808L155.073,140.934z`);
+        path6.setAttribute('fill', '#FFAC52');
 
-      path7.setAttribute(
-        "d",
-        `M68.831,82.977c-29.949,33.252-48.341,77.099-48.808,125.159
-		c45.396-4.364,87.685-22.921,120.907-53.06L68.831,82.977z`
-      );
-      path7.setAttribute("fill", "#FFAC52");
+        path7.setAttribute('d', `M68.831,82.977c-29.949,33.252-48.341,77.099-48.808,125.159
+		c45.396-4.364,87.685-22.921,120.907-53.06L68.831,82.977z`);
+        path7.setAttribute('fill', '#FFAC52');
 
-      path8.setAttribute(
-        "d",
-        `M351.169,337.03c29.953-33.252,48.347-77.101,48.812-125.164
-		c-45.396,4.365-87.687,22.924-120.91,53.065L351.169,337.03z`
-      );
-      path8.setAttribute("fill", "#FFAC52");
+        path8.setAttribute('d', `M351.169,337.03c29.953-33.252,48.347-77.101,48.812-125.164
+		c-45.396,4.365-87.687,22.924-120.91,53.065L351.169,337.03z`);
+        path8.setAttribute('fill', '#FFAC52');
 
-      path9.setAttribute(
-        "d",
-        `M209.997,0.003C94.204,0.003,0,94.21,0,210.005c0,115.793,94.204,209.997,209.997,209.997
+        path9.setAttribute('d', `M209.997,0.003C94.204,0.003,0,94.21,0,210.005c0,115.793,94.204,209.997,209.997,209.997
 		c115.799,0,210.008-94.204,210.008-209.997C420.004,94.21,325.795,0.003,209.997,0.003z M20.024,208.137
 		c0.466-48.061,18.858-91.907,48.808-125.159l72.099,72.099C107.709,185.215,65.42,203.772,20.024,208.137z M208.136,20.027
 		c-4.366,45.395-22.924,87.684-53.063,120.907L82.974,68.835C116.226,38.884,160.074,20.491,208.136,20.027z M399.981,211.866
@@ -309,106 +194,90 @@
 		C71.296,223.528,118.301,202.895,155.086,169.232z M209.996,195.858l-40.768-40.768c33.664-36.786,54.297-83.791,58.915-134.215
 		c41.651,3.965,79.422,21.427,108.88,47.957L209.996,195.858z M209.996,224.142l40.776,40.776
 		c-33.664,36.785-54.297,83.789-58.914,134.212c-41.654-3.964-79.429-21.428-108.887-47.962L209.996,224.142z M264.928,279.074
-		l72.098,72.098c-33.252,29.948-77.099,48.339-125.16,48.806C216.232,354.583,234.789,312.295,264.928,279.074z`
-      );
+		l72.098,72.098c-33.252,29.948-77.099,48.339-125.16,48.806C216.232,354.583,234.789,312.295,264.928,279.074z`);
 
-      svg.appendChild(path1);
-      svg.appendChild(path2);
-      svg.appendChild(path3);
-      svg.appendChild(path4);
-      svg.appendChild(path5);
-      svg.appendChild(path6);
-      svg.appendChild(path7);
-      svg.appendChild(path8);
-      svg.appendChild(path9);
-      newBall.element.appendChild(svg);
-      newBall.width = parseInt(newBall.element.style.width);
-      newBall.height = parseInt(newBall.element.style.height);
-      canvas.element.appendChild(newBall.element);
-      return newBall;
+        svg.appendChild(path1);
+        svg.appendChild(path2);
+        svg.appendChild(path3);
+        svg.appendChild(path4);
+        svg.appendChild(path5);
+        svg.appendChild(path6);
+        svg.appendChild(path7);
+        svg.appendChild(path8);
+        svg.appendChild(path9);
+        newBall.element.appendChild(svg);
+        newBall.width = parseInt(newBall.element.style.width);
+        newBall.height = parseInt(newBall.element.style.height);
+        canvas.element.appendChild(newBall.element);
+        return newBall;
     },
     moveTo: function (x, y) {
-      this.element.style.left = x + "px";
-      this.element.style.top = y + "px";
+        this.element.style.left = x + 'px';
+        this.element.style.top = y + 'px';;
     },
     changeDirectionIfNecessary: function (x, y) {
-      if (
-        x < -160 ||
-        x > document.documentElement.clientWidth - this.width + 180
-      ) {
-        this.dx = -this.dx;
-      }
-      if (
-        y < -160 ||
-        y > document.documentElement.clientHeight - this.height - 60
-      ) {
-        this.dy = -this.dy;
-      }
+        if (x < -160 || x > document.documentElement.clientWidth - this.width + 180) {
+            this.dx = -this.dx;
+        }
+        if (y < -160 || y > document.documentElement.clientHeight - this.height-60) {
+            this.dy = -this.dy;
+        }
     },
     draw: function (x, y) {
-      this.moveTo(x, y);
-      var ball = this;
+        this.moveTo(x, y);
+        var ball = this;
 
-      setTimeout(function () {
-        ball.changeDirectionIfNecessary(x, y);
-        ball.draw(x + ball.dx, y + ball.dy);
-      }, 1);
-    },
-  };
+        setTimeout(function () {
+            ball.changeDirectionIfNecessary(x, y);
+            ball.draw(x + ball.dx, y + ball.dy);
+            
+        }, 1);
+    }
+};
 
-  canvas.initialize();
-  const balls = new Array(20);
-  for (let i = 0; i < 20; i++) {
-    balls[i] = Ball.create(
-      "orange",
-      Math.ceil(Math.random() * 2) == 1 ? 5 : -5,
-      Math.ceil(Math.random() * 2) == 1 ? 5 : -5
-    );
-    balls[i].draw(
-      Math.random() * (document.documentElement.clientWidth - 320),
-      Math.random() * (document.documentElement.clientHeight - 300),
-      0
-    );
-  }
+canvas.initialize();
+const balls = new Array(20);
+for(let i = 0; i < 20; i++){
+	balls[i] = Ball.create("orange", (Math.ceil(Math.random()*2) == 1 ? 5: -5), (Math.ceil(Math.random()*2) == 1 ? 5: -5));
+  balls[i].draw(Math.random() * (document.documentElement.clientWidth-320), Math.random() * (document.documentElement.clientHeight-300), 0);
+}
 
-  function acceptInput() {
-    document.getElementById("submit-video").style.visibility = "visible";
-  }
+function acceptInput(){
+  document.getElementById("submit-video").style.visibility = "visible";
+}
 
-  function inputMP4() {
-    document.getElementById("submit-video").style.display = "visible";
-  }
+function inputMP4(){
+  document.getElementById("submit-video").style.display = "visible";
+}
 
-  function showScores() {}
+function showScores(){
+  
+}
 
-  function getVideo() {}
+function getVideo(){
+  
+}
 
 function submitVideo(){
-
-}
-=======
-  function submitVideo() {
-    // Select the file input
-    const fileInput = document.getElementById("file_upload");
->>>>>>> 7beac6ad0ae6563442b532f0db82a09bcd1044c8
-
-    // Get the selected file
-    const file = event.target.files[0];
-
-    console.log(file);
+  const fileInput = document.getElementById("file_upload");
+  const player1Input = document.getElementById("player1Name");
+  const player2Input = document.getElementById("player2Name");
+  const file = fileInput.files.item(0);
     // Create a FormData instance
-    const formData = new FormData();
-
-    // Append the file to the form data
-    formData.append("file", file);
-
-    // Make the POST request
-    fetch("http://localhost:3000/upload", {
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("player1Name", player1Input.value);
+  formData.append("player2Name", player2Input.value);
+  // Make the POST request
+  fetch("http://localhost:3000/upload", {
       method: "POST",
       body: formData,
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((error) => console.error(error));
-  }
+    
+}
+
+
 </script>
