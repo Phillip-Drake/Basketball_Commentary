@@ -14,7 +14,11 @@ const videoSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  finalScore: {
+  finalScorePlayer1: {
+    type: Number,
+    default: 0,
+  },
+  finalScorePlayer2: {
     type: Number,
     default: 0,
   },
