@@ -2,7 +2,6 @@ import express from "express";
 import videoRouter from "./routes/videoRoutes";
 import dotenv from "dotenv";
 import connectToDB from "./db";
-import User from "./models/userModels";
 import userRouter from "./routes/userRoutes";
 
 dotenv.config();
