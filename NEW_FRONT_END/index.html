@@ -46,7 +46,6 @@
               Phillip vs Taylor
             </div>
 
-            <video controls width = "400px">
             <video controls width = "80%">
               <source  src="https://hooperai.s3.us-east-2.amazonaws.com/1713023167688video.mp4" type="video/mp4">
              </video>
@@ -77,17 +76,11 @@
                   document.getElementById("paypal-button-container").style.display = "none";
                   document.getElementById("cancel-pay-button").style.display ="none";
                   // Render the Venmo button into #paypal-button-container
-                  paypal.Buttons().render('#paypal-button-container')
                   paypal.Buttons().render('#paypal-button-container');
               </script>
-          </div>
-             <div class = "share-button">
+            </div>
+             <div class = "share-button" onclick="getVideos()">
               <img src="src/share.svg" width="60%">
-            </div>
-             <div class = "info-button" onclick="showScores('scoreTable')">
-              <img src="src/scoreboard.svg" width="60%" height="60%">
-              
-            </div>
             </div>
           </div>
 
@@ -315,20 +308,41 @@ function getVideos(){
     scoreboard.appendChild(scoreboardNumberOne);
     scoreboard.appendChild(scoreboardNumberTwo);
     
-    var infoButton = document.createElement('div');
-    infoButton.classList.add('info-button');
-    infoButton.addEventListener('click', function(e) {
-      showScores();
+    var payButtonContainer = document.createElement('div');
+    payButtonContainer.id = "pay-button-container";
+    payButtonContainer.classList.add("pay-button-container");
+    var payButtonButton = document.createElement('button');
+    
+    payButtonButton.id = "pay-button";
+    payButtonButton.classList.add("button");
+    document.getElementById('pay-button').addEventListener('click', function(e) {
+      payWinner();
     });
+    payButtonButton.innerHTML = "Pay the winner";
 
-    var svg = document.createElement('img');
-    svg.src = "src/scoreboard.svg";
-    svg.classList.add("scoreboardImage")
-    infoButton.appendChild(svg);
+    payButtonContainer.appendChild(payButtonButton);
+    
+    var paypalButtonContainer = document.createElement('div');
+    paypalButtonContainer.id = "paypal-button-container";
+    
+    var cancelPayButtonContainer = document.createElement('div');
+    cancelPayButtonContainer.id = 'cancel-pay-button-container';
+
+    var cancelPayButton = document.createElement('button');
+    cancelPayButton.id = 'cancel-pay-button';
+    cancelPayButton.classList.add('button');
+    document.getElementById('cancel-pay-button').addEventListener('click', function(e) {
+      cancelPay();
+    });
+    cancelPayButton.innerHTML = 'Cancel';
+    cancelPayButtonContainer.appendChild(cancelPayButton);
+
     wrapper.appendChild(title);
     wrapper.appendChild(videoWrapper);
     wrapper.appendChild(scoreboard);
-    wrapper.appendChild(infoButton);
+    wrapper.appendChild(payButtonContainer);
+    wrapper.appendChild(paypalButtonContainer);
+    wrapper.appendChild(cancelPayButtonContainer);
     
     document.getElementById("content-right").appendChild(wrapper);
   //}
