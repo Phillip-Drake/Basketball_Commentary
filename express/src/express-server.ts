@@ -1,6 +1,10 @@
 import express from "express";
 import videoRouter from "./routes/videoRoutes";
 import dotenv from "dotenv";
+
+import connectToDB from "./db";
+import userRouter from "./routes/userRoutes";
+
 import cors from "cors";
 
 dotenv.config();
@@ -12,7 +16,10 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use("/upload", videoRouter);
+app.use("/users", userRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+connectToDB();
