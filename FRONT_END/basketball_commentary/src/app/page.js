@@ -19,7 +19,7 @@ export default function Home() {
     return (
       <div className={styles.bodyContainer}>
         <p className={styles.header}>
-              {user}
+          User : {user}
         </p>
         <main className={styles.main}>
           
@@ -36,15 +36,20 @@ export default function Home() {
     );
   } else {
     return (
-      <main className={styles.main}>
-        <p className={styles.nameInputLabel}>
-          Your Video!
+      <div className={styles.bodyContainer}>
+        <p className={styles.header}>
+          User : {user}
         </p>
-        //right here
-        <div className = {styles.button} onClick={returnToHome}>
-          Go back to home
-        </div>
-      </main>
+        <main className={styles.main}>
+          <p className={styles.nameInputLabel}>
+            Your Video!
+          </p>
+          //Blockchaiiiinnnnn
+          <div className = {styles.button} onClick={returnToHome}>
+            Go back to home
+          </div>
+        </main>
+      </div>
     )
   }
 }
@@ -70,9 +75,11 @@ export function PopupButton({ children, setUser, setPageMode }) {
     setMode(1);
   }
   function login(){
-    //Query database with login info, 
-    setUser(document.getElementById("usernameInput").value)
-    setPageMode();
+    //Query database with login info, check if login is valid and all that jazz
+    setUser(document.getElementById("usernameInput").value);
+    setPlayer1Name(document.getElementById("usernameInput").value);    
+    setMode(3);
+    
   }
   function guestFlow() {
     setMode(2);
@@ -183,6 +190,53 @@ export function PopupButton({ children, setUser, setPageMode }) {
           </div>
         )}
       </Popup>
+    );
+  } else if (mode == 3){
+    const handleUpload = async () => {
+      // Create a new FormData object
+      // Append all the data to the object
+      const formData = new FormData();
+      formData.append("player1Name", player1Name);
+      formData.append("player2Name", player2Name);
+      formData.append("file", file);
+
+      // Use axios to post the data to the server
+      const result = await axios.post("http://localhost:3001/upload", formData);
+
+      // Log the result from the server
+      console.log(result.data);
+    };
+    return (
+      <Popup trigger={button} modal nested>
+                {
+                  close => 
+                    
+                    (<div className = {styles.initialPopup}>
+                        <p className = {styles.nameInputLabel}>Input Opponent Name</p>
+                        <textarea class={styles.nameInput}
+                          rows="1"
+                          onChange={(e) => setPlayer2Name(e.target.value)}/>
+                        
+                        <label for="file" className={styles.inBoxButton}>
+                          Select MP4
+                        </label>
+                        <input
+                          type="file"
+                          id="file"
+                          name="file"
+                          onChange={(e) => setFile(e.target.files[0])}
+                          className={styles.file}
+                        />
+                        <div className={styles.inBoxButton} onClick={handleUpload}>
+                          Upload MP4
+                        </div>
+                        <div className = {styles.inBoxButton} onClick={menu}>
+                              Go Back To Menu
+                        </div>
+                      </div>
+                    )
+                }
+            </Popup>
     );
   }
 }
