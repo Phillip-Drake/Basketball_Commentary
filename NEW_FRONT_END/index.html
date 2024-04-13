@@ -350,6 +350,12 @@ function getVideos(){
   //}
 }
 
+function getVideos(){
+    fetch('http://localhost:3000/upload/video')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+}
 
 
 
