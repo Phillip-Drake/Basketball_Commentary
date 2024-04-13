@@ -13,18 +13,18 @@
     <div class = "flex-body">
         <div class = "content-left">
             <div class = "input-box">
-              <img src = "src/logo.png">
+              <img src = "src/logo.png" class = "logo">
 
               <div class = "input-title">
                 Input Player 1 Name
               </div>
-              <textarea class = text-input rows="1">
+              <textarea class = text-input rows="1" id="player1Name">
                 
               </textarea>
               <div class = "input-title">
                 Input Player 2 Name
               </div>
-              <textarea class = text-input rows="1">
+              <textarea class = text-input rows="1" id="player2Name">
                 
               </textarea>
               <label for = "file_upload" class = "button">
@@ -33,7 +33,7 @@
                   </p>
               </label>
               <input id = "file_upload" type="file" onchange = "acceptInput()" accept = ".mp4">
-              <div id = "submit-video" class = "button submit-video">
+              <div id = "submit-video" class = "button submit-video" onclick="submitVideo()">
                 <p>
                   Submit Video
                 </p>
@@ -45,8 +45,9 @@
             <div class = "input-title">
               Phillip vs Taylor
             </div>
-            <video controls>
-              <source  src="src/video.mp4" type="video/mp4">
+
+            <video controls width = "80%">
+              <source  src="https://hooperai.s3.us-east-2.amazonaws.com/1713023167688video.mp4" type="video/mp4">
              </video>
              <div class = "scoreboard">
               <div class = "scoreboardNumberone">
@@ -248,5 +249,35 @@ function acceptInput(){
 function inputMP4(){
   document.getElementById("submit-video").style.display = "visible";
 }
+
+function showScores(){
+  
+}
+
+function getVideo(){
+  
+}
+
+function submitVideo(){
+  const fileInput = document.getElementById("file_upload");
+  const player1Input = document.getElementById("player1Name");
+  const player2Input = document.getElementById("player2Name");
+  const file = fileInput.files.item(0);
+    // Create a FormData instance
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("player1Name", player1Input.value);
+  formData.append("player2Name", player2Input.value);
+  // Make the POST request
+  fetch("http://localhost:3000/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+    
+}
+
 
 </script>
