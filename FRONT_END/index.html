@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
-    <title>Phillip Drake</title>
+    <title>Hooper_ai</title>
 </head>
   <body>
     <div class = "flex-body">
@@ -41,48 +41,6 @@
             </div>
         </div>
         <div class = "content-right" id="content-right">
-          <div class = "video-box">
-            <div class = "input-title">
-              Phillip vs Taylor
-            </div>
-
-            <video controls width = "80%">
-              <source  src="https://hooperai.s3.us-east-2.amazonaws.com/1713023167688video.mp4" type="video/mp4">
-             </video>
-             <div class = "scoreboard">
-              <div class = "scoreboardNumberone">
-                5
-              </div>
-              <div class = "scoreboardNumbertwo">
-                6
-              </div>
-             </div>
-             <div>
-              <div id="pay-button-container" class = "pay-button-container">
-                  <button id="pay-button" class="button" onclick="payWinner()">Pay the winner</button>
-              </div>
-              <!-- Set up a container element for the button -->
-              <div id="paypal-button-container"></div>
-
-              <div id="cancel-pay-button-container">
-                  <button id="cancel-pay-button" class="button" onclick="cancelPay()">Cancel</button>
-              </div>
-
-              <!-- Include the PayPal JavaScript SDK. Replace `YOUR_CLIENT_ID` with your client ID.-->
-              <!-- Note that `enable-funding=venmo` is added as a query parameter -->
-              <script src="https://www.paypal.com/sdk/js?client-id=ASGEes9OQO843Zl5nccRfAXYl9BObk2E8sd9YZckc-2yDi-RhFnOIN87AVbFfeLi6i4nRryCDd3GVF1N&enable-funding=venmo"></script>
-
-              <script>
-                  document.getElementById("paypal-button-container").style.display = "none";
-                  document.getElementById("cancel-pay-button").style.display ="none";
-                  // Render the Venmo button into #paypal-button-container
-                  paypal.Buttons().render('#paypal-button-container');
-              </script>
-            </div>
-             <div class = "share-button" onclick="getVideos()">
-              <img src="src/share.svg" width="60%">
-            </div>
-          </div>
 
         </div>
 
@@ -354,6 +312,7 @@ function getVideos(){
     document.getElementById("content-right").appendChild(wrapper);
   //}
 }
+getVideos();
 
 
 
