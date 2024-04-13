@@ -7,7 +7,7 @@ body{
     color: #2D3238;
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     scrollbar-width: none;
-    min-height: 100vh;
+    min-height:90vh;
     overflow-x: hidden;
     
     -ms-overflow-style: none;
@@ -133,7 +133,7 @@ body{
     align-items: center;
     justify-content: center;
     position:relative;
-    
+    margin-bottom: 2rem;
 }
 .video{
     width: 80%;
