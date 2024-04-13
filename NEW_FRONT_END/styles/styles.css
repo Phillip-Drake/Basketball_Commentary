@@ -35,6 +35,9 @@ body{
     justify-content: center;
 
 }
+.share-button-image{
+    width: "60%"
+}
 .content-right{
     display: flex;
     flex-direction: column;
