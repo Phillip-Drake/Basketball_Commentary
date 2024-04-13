@@ -6,10 +6,10 @@ const storage = multer.diskStorage({
     cb(null, "uploads/");
   },
   filename: function (req, file, cb) {
-    fs.readdir("uploads/", (err, files) => {
-      let count = files ? files.length : 0;
-      cb(null, count + 1 + ".mp4");
-    });
+    const player1Name = req.body.player1Name;
+    const player2Name = req.body.player2Name;
+    const filename = `${Date.now()}_${player1Name}_vs_${player2Name}.mp4`;
+    cb(null, filename);
   },
 });
 
