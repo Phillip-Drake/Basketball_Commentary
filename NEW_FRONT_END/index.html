@@ -269,6 +269,10 @@ function submitVideo(){
       document.getElementById("pay-button").style.display = "flex";
   }
 function getVideos(){
+  fetch('http://localhost:3000/upload/video')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
   //something something get command
 
   //const output;
@@ -307,7 +311,7 @@ function getVideos(){
     //scoreboardNumberTwo.innerHTML = video.finalScorePlayerTwo
     scoreboard.appendChild(scoreboardNumberOne);
     scoreboard.appendChild(scoreboardNumberTwo);
-    
+  
     var payButtonContainer = document.createElement('div');
     payButtonContainer.id = "pay-button-container";
     payButtonContainer.classList.add("pay-button-container");
@@ -328,32 +332,30 @@ function getVideos(){
     var cancelPayButtonContainer = document.createElement('div');
     cancelPayButtonContainer.id = 'cancel-pay-button-container';
 
-    var cancelPayButton = document.createElement('button');
-    cancelPayButton.id = 'cancel-pay-button';
-    cancelPayButton.classList.add('button');
-    document.getElementById('cancel-pay-button').addEventListener('click', function(e) {
-      cancelPay();
-    });
-    cancelPayButton.innerHTML = 'Cancel';
-    cancelPayButtonContainer.appendChild(cancelPayButton);
+    var shareButton = document.createElement('div');
+    shareButton.classList.add('share-button');
+    //onclickListener
+
+    var shareButtonImage = document.createElement('img');
+    shareButtonImage.src = 'src/share.svg'
+    
+    shareButtonImage.style.width = '60%';
+    
+    shareButton.appendChild(shareButtonImage);
+
+
 
     wrapper.appendChild(title);
     wrapper.appendChild(videoWrapper);
     wrapper.appendChild(scoreboard);
     wrapper.appendChild(payButtonContainer);
     wrapper.appendChild(paypalButtonContainer);
-    wrapper.appendChild(cancelPayButtonContainer);
-    
+    wrapper.appendChild(shareButton)
     document.getElementById("content-right").appendChild(wrapper);
   //}
 }
 
-function getVideos(){
-    fetch('http://localhost:3000/upload/video')
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error('Error:', error));
-}
+
 
 
 
