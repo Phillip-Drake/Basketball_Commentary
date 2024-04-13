@@ -44,7 +44,6 @@ export default function Home() {
           <p className={styles.nameInputLabel}>
             Your Video!
           </p>
-          //Blockchaiiiinnnnn
           <div className = {styles.button} onClick={returnToHome}>
             Go back to home
           </div>
@@ -87,7 +86,10 @@ export function PopupButton({ children, setUser, setPageMode }) {
   function menu(){
     setMode(0);
   }
-
+  function setPage(){
+    setPageMode();
+    alert("Happened")
+  }
   if (mode == 0) {
     return (
       <Popup trigger={button} modal nested>
@@ -193,6 +195,7 @@ export function PopupButton({ children, setUser, setPageMode }) {
     );
   } else if (mode == 3){
     const handleUpload = async () => {
+      setPage()
       // Create a new FormData object
       // Append all the data to the object
       const formData = new FormData();
@@ -205,6 +208,7 @@ export function PopupButton({ children, setUser, setPageMode }) {
 
       // Log the result from the server
       console.log(result.data);
+      
     };
     return (
       <Popup trigger={button} modal nested>
