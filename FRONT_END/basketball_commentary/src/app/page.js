@@ -58,7 +58,7 @@ export function PopupButton({children}){
                 }
             </Popup>
     );
-  } else{
+  } else if (mode == 1){ //LOGIN FLOW
     return (
       <Popup trigger={button} modal nested>
                 {
@@ -66,12 +66,37 @@ export function PopupButton({children}){
                       
                       (
                         <div className={styles.initialPopup}>
-                            <InBoxButton onclick={loginFlow}>
-                              NotLogin
-                            </InBoxButton>
-                            <InBoxButton onclick={guestFlow}>
-                              Guest
-                            </InBoxButton>
+                            <div className = {styles.inBoxButton} onClick={loginFlow}>
+                                Login
+                            </div>
+                            <div className = {styles.inBoxButton} onClick={guestFlow}>
+                                Guest
+                            </div>
+                            <div className = {styles.inBoxButton} onClick={close}>
+                                Close
+                            </div>
+                        </div>
+                      )
+                }
+            </Popup>
+    );
+  } else if(mode == 2){
+    return (
+      <Popup trigger={button} modal nested>
+                {
+                    close => 
+                      
+                      (
+                        <div className={styles.initialPopup}>
+                            <div className = {styles.inBoxButton} onClick={loginFlow}>
+                                Login
+                            </div>
+                            <div className = {styles.inBoxButton} onClick={guestFlow}>
+                                Guest
+                            </div>
+                            <div className = {styles.inBoxButton} onClick={close}>
+                                Close
+                            </div>
                         </div>
                       )
                 }
