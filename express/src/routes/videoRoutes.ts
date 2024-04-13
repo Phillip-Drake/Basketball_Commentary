@@ -33,6 +33,4 @@ videoRouter.get("/video", async (req: Request, res: Response) => {
   }
 });
 
-// videoRouter.post("/", uploadFileToAWS);
-
 export default videoRouter;

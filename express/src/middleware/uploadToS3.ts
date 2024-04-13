@@ -77,7 +77,7 @@ async function watchDirectoryForChanges() {
         for (const file of files) {
           const filePath = path.join(dirPath, file);
           await uploadFileToAWS(filePath);
-          break;
+          return;
         }
       }
     } catch (error) {
