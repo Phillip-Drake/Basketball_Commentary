@@ -16,8 +16,8 @@ body{
     max-width: 30rem;
     width: 80%;
     display: block;
-  margin-left: auto;
-  margin-right: auto;   
+    margin-left: auto;
+    margin-right: auto;   
 }
 .flex-body{
     display: flex;
@@ -35,6 +35,9 @@ body{
     justify-content: center;
 
 }
+.share-button-image{
+    width: "60%"
+}
 .content-right{
     display: flex;
     flex-direction: column;
@@ -44,7 +47,9 @@ body{
     padding: 2rem;
     
 }
-
+.pay-button-container{
+    margin-top: 2rem;
+}
 .input-box{
     display: flex;
     flex-direction: column;
@@ -130,6 +135,9 @@ body{
     position:relative;
     
 }
+.video{
+    width: 80%;
+}
 .scoreboard{
     height: 4rem;
     width: 10rem;
@@ -147,6 +155,7 @@ body{
 }
 .scoreboardNumberone{
     font-size: 45px;
+    padding-top:7px;
     color: white;
     display:flex;
     justify-content:center;
@@ -159,6 +168,7 @@ body{
 }
 .scoreboardNumbertwo{
     font-size: 45px;
+    padding-top:7px;
     color: white;
     display:flex;
     justify-content:center;
@@ -166,9 +176,13 @@ body{
     align-items: center;
     width: 50%;
     color: red;
-}
 
-.info-button{
+}
+.scoreboardImage{
+    width: 200px;
+    height: 60%;
+}
+.share-button{
     position: absolute;
     bottom:10px;
     right:10px;
@@ -180,7 +194,35 @@ body{
     align-items: center;
     background-color: #bd6649;
 }
+.scoreTable{
+    display: none;
+}
+table{
+    margin-top: 2rem;
+    background-color:#bd6649;
+    padding: 1rem;
+    border-radius: 5px;
+    border-style: solid;
+    border-collapse: collapse;
+    color:#2D3238;
+}
+tr{
+    background-color:#bd6649;
+    padding: 1rem;
+
+    
+}
+th{
+    background-color:#bd6649;
+
+    padding: 1rem;
+    border-style: solid;
+}
 .info-button:hover{
+    background-color:#F88158;
+    transition: 0.3s;
+}
+.share-button:hover{
     background-color:#F88158;
     transition: 0.3s;
 }
