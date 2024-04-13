@@ -10,6 +10,10 @@
   
   
 }
+.bodyContainer{
+  display:flex;
+  flex-direction:column;
+}
 .logoWrapper{
   display: flex;
   flex-direction: column;
@@ -83,7 +87,6 @@
   display:flex;
   justify-content:center;
   flex-direction:column;
-  text-align: center;
 }
 .initialPopup{
   width: 70vw;
@@ -107,9 +110,18 @@
   font-family: 'Roboto', sans-serif;
 }
 .nameInputLabel{
-  font-size: 30px;
-  color: rgb(255, 255, 255);
-  
-  margin-bottom: 1rem;
-  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:bold;
+}
+.header{
+  position:absolute;
+  padding-left: 10px;
+  padding-top:10px;
+  background-color:rgb(80, 80, 80);  
+  font-size: 25px;
+}
+
+.file{
+  display: none;
 }
