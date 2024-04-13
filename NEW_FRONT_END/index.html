@@ -57,7 +57,6 @@
                 6
               </div>
              </div>
-              <div>
              <div>
               <div id="pay-button-container" class = "pay-button-container">
                   <button id="pay-button" class="button" onclick="payWinner()">Pay the winner</button>
@@ -66,6 +65,45 @@
               <div id="paypal-button-container"></div>
 
               <div id="cancel-pay-button-container">
+                  <button id="cancel-pay-button" class="button" onclick="cancelPay()">Cancel</button>
+              </div>
+
+              <!-- Include the PayPal JavaScript SDK. Replace `YOUR_CLIENT_ID` with your client ID.-->
+              <!-- Note that `enable-funding=venmo` is added as a query parameter -->
+              <script src="https://www.paypal.com/sdk/js?client-id=ASGEes9OQO843Zl5nccRfAXYl9BObk2E8sd9YZckc-2yDi-RhFnOIN87AVbFfeLi6i4nRryCDd3GVF1N&enable-funding=venmo"></script>
+
+              <script>
+                  document.getElementById("paypal-button-container").style.display = "none";
+                  document.getElementById("cancel-pay-button").style.display ="none";
+                  // Render the Venmo button into #paypal-button-container
+                  paypal.Buttons().render('#paypal-button-container')
+              </script>
+          </div>
+             <div class = "share-button">
+              <img src="src/share.svg" width="60%">
+            </div>
+             <div class = "info-button" onclick="showScores('scoreTable')">
+              <img src="src/scoreboard.svg" width="60%" height="60%">
+              
+            </div>
+            <div id = "scoreTable">
+              <table class = "table">
+                <tr class = "tr">
+                  <th>TimeStamp</th>
+                  <th>Scorer</th>
+                  <th>Total Score</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                </tr>
+              </table>
             </div>
           </div>
 
@@ -214,13 +252,13 @@ function inputMP4(){
   document.getElementById("submit-video").style.display = "visible";
 }
 
-function showScores(){
+function showScores(scoreTable){
+  if(document.getElementById(scoreTable).style.display == "none")
+    document.getElementById(scoreTable).style.display = "unset";
+  else
+    document.getElementById(scoreTable).style.display = "none"
 
-}
-
-function getVideo(){
-
-}
+} 
 
 function submitVideo(){
   const fileInput = document.getElementById("file_upload");
