@@ -5,12 +5,6 @@ const videoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-  },
-  url: {
-    type: String,
-  },
   date_made: {
     type: Date,
     default: Date.now,
@@ -19,7 +13,10 @@ const videoSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  timeStamps: {
+  goalTimes: {
+    type: Array,
+  },
+  rimCoordinates: {
     type: Array,
   },
 });

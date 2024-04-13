@@ -1,17 +1,26 @@
 import express, { Request, Response, NextFunction } from "express";
 import * as uploadController from "../controllers/videoController";
-import { uploadToAWS } from "../middleware/uploadToS3";
+import { watchDirectoryForChanges } from "../middleware/uploadToS3";
 
 const videoRouter = express.Router();
 
 videoRouter.post(
   "/video",
   uploadController.uploadFile,
-  (req: Request, res: Response, next: NextFunction) => {
-    res.status(200).send("File uploaded successfully");
+  async (req: Request, res: Response, next: NextFunction) => {
+    if (!req.file) {
+      res.status(400).send("No file uploaded.");
+    } else {
+      try {
+        await watchDirectoryForChanges();
+        res.status(200).send("File uploaded successfully.");
+      } catch (error) {
+        res.status(500).send("File upload failed.");
+      }
+    }
   }
 );
 
-videoRouter.post("/", uploadToAWS);
+// videoRouter.post("/", uploadFileToAWS);
 
 export default videoRouter;
