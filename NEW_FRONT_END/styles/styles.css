@@ -12,6 +12,13 @@ body{
     
     -ms-overflow-style: none;
 }
+.logo{
+    max-width: 30rem;
+    width: 80%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;   
+}
 .flex-body{
     display: flex;
     flex-direction: row;
@@ -102,6 +109,7 @@ body{
 }
 .button:hover{
     background-color: #bd6649;
+    transition: 0.3s;
 }
 .video-box{
     display: flex;
@@ -174,6 +182,7 @@ body{
 }
 .info-button:hover{
     background-color:#F88158;
+    transition: 0.3s;
 }
 
 #canvas {

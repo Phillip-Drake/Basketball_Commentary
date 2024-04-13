@@ -13,7 +13,7 @@
     <div class = "flex-body">
         <div class = "content-left">
             <div class = "input-box">
-              <img src = "src/logo.png">
+              <img src = "src/logo.png" class = "logo">
 
               <div class = "input-title">
                 Input Player 1 Name
@@ -30,7 +30,7 @@
               <label for = "file_upload" class = "button">
                   <p>
                     Upload video  
-                  </p>
+                  </p>  
               </label>
               <input id = "file_upload" type="file" onchange = "acceptInput()" accept = ".mp4">
               <div id = "submit-video" class = "button submit-video" onclick="submitVideo()">
@@ -46,7 +46,7 @@
               Phillip vs Taylor
             </div>
 
-            <video controls width = "400px">
+            <video controls width = "80%">
               <source  src="https://hooperai.s3.us-east-2.amazonaws.com/1713023167688video.mp4" type="video/mp4">
              </video>
              <div class = "scoreboard">
@@ -259,7 +259,7 @@ function getVideo(){
 }
 
 function submitVideo(){
-  
+
 }
 
 
