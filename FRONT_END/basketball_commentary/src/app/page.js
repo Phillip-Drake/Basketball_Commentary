@@ -64,17 +64,18 @@ export function PopupButton({children}){
                 {
                     close => 
                       
-                      (
-                        <div className={styles.initialPopup}>
-                            <div className = {styles.inBoxButton} onClick={loginFlow}>
-                                Login
+                      (<div className = {styles.initialPopup}>
+                          <div className = {styles.guestFlowTopBox}>
+                            <div className = {styles.guestFlowColumn}>
+                                Test1
                             </div>
-                            <div className = {styles.inBoxButton} onClick={guestFlow}>
-                                Guest
+                            <div className = {styles.guestFlowColumn}>
+                              Test2
                             </div>
-                            <div className = {styles.inBoxButton} onClick={close}>
+                          </div>
+                          <div className = {styles.inBoxButton} onClick={close}>
                                 Close
-                            </div>
+                          </div>
                         </div>
                       )
                 }
@@ -87,16 +88,23 @@ export function PopupButton({children}){
                     close => 
                       
                       (
-                        <div className={styles.initialPopup}>
-                            <div className = {styles.inBoxButton} onClick={loginFlow}>
-                                Login
+                        <div className = {styles.initialPopup}>
+                          <div className = {styles.guestFlowTopBox}>
+                            <div className = {styles.guestFlowColumn}>
+                              <p className = {styles.nameInputLabel}>Player 1 Name</p>
+                              <textarea class = {styles.nameInput} rows="1" hint = "Player 1 Name"/>
                             </div>
-                            <div className = {styles.inBoxButton} onClick={guestFlow}>
-                                Guest
+                            <div className = {styles.guestFlowColumn}>
+                              <p className = {styles.nameInputLabel}>Player 2 Name</p>
+                              <textarea class = {styles.nameInput} rows="1"/>
                             </div>
-                            <div className = {styles.inBoxButton} onClick={close}>
+                          </div>
+                          <div className = {styles.inBoxButton} onClick={close}>
+                                Upload MP4
+                          </div>
+                          <div className = {styles.inBoxButton} onClick={close}>
                                 Close
-                            </div>
+                          </div>
                         </div>
                       )
                 }
@@ -111,4 +119,11 @@ export function InBoxButton({children}){
   return <div className = {styles.inBoxButton} onClick={handleClick}>
         {children}
     </div>
+}
+
+export function inputBox({children}){
+
+  return (
+    <textarea rows="4" cols="50"/>
+  )
 }
